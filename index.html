@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Homepage | MF.D</title>
+<meta charset="utf-8"></meta>
 <style>
-  body { font-family: sans-serif; margin: 0px; padding: 0px; }
+body { margin: 0px; padding: 0px; background-color: #000000; font-family: sans-serif; }
+#cat { display: block; }
+#meow { font-size: 80px; margin: 0px auto; text-align: center; }
 </style>
+<script type="text/javascript">
+var BASEVEL = 10;
+var MAXPOS = 1000;
+var MINPOS = 0;
+var TIMEOUT = 20; 
+
+var cooldown = 0;
+
+var pos = 0;
+var vel = BASEVEL;
+
+var update = function() {
+	pos += vel;
+	if(pos > MAXPOS) { vel = -1 * BASEVEL; pos = MAXPOS; cooldown = TIMEOUT; }
+	if(pos < MINPOS) { vel = BASEVEL; pos = MINPOS; cooldown = TIMEOUT; }
+	document.getElementById("cat").setAttribute("style","margin-left: " + pos + "px;");
+
+	
+	if(cooldown > 0) { document.getElementById("meow").setAttribute("style","color: #c7c7c7;"); }
+	if(cooldown === 0) { document.getElementById("meow").setAttribute("style","color: #000000;"); }
+	cooldown--;
+
+	requestAnimationFrame(update);
+}
+
+window.onload = function() {
+	MAXPOS = document.body.offsetWidth - document.getElementById("cat").offsetWidth;
+	requestAnimationFrame(update);
+}
+</script>
+<title>MEOW</title>
 </head>
 <body>
-<div style="text-align: center; width: 45%; margin: 80px auto 0 auto;">
-Right now this site is still under construction. However, I can tell you that it will be called MF.D for whatever reason, probably because "The<b>M</b>onster<b>F</b>romThe<b>D</b>eep is too long.
+<img id="cat" src="https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg" />
+<div id="meow">
+MEOW
 </div>
 </body>
 </html>
