@@ -29,6 +29,10 @@ var update = function() {
 window.onload = function() {
 	MAXPOS = document.body.offsetWidth - document.getElementById("cat").offsetWidth;
 	requestAnimationFrame(update);
+	
+	document.body.onresize = function() {
+		MAXPOS = document.body.offsetWidth - document.getElementById("cat").offsetWidth;
+	}
 }
 </script>
 <title>MEOW</title>
