@@ -5,13 +5,16 @@ funk.listen(window,'load',function() {
 		var buttons = funk.retrieveClass('nav-button');
 		var homeButton = buttons[0];
 		var projectButton = buttons[1];
+		var projectMenu = '';
 		
 		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
+			projectMenu = response.text;
+			
 			projectButton.listen('mouseenter',function() {
-				projectButton.innerHTML = "Project" + response.text;
+				projectButton.innerHTML = "Project" + projectMenu;
 			});
 			
-			projectButton.listen('mouseexit',function() {
+			projectButton.listen('mouseleave',function() {
 				projectButton.innerHTML = "Project";
 			});
 		});
