@@ -27,6 +27,8 @@ a {
 .nav-button {
 	background-color: #08530f;
 	padding: 0px 5px;
+	height: 48px;
+	line-height: 48px;
 }
 
 .nav-button:hover {
