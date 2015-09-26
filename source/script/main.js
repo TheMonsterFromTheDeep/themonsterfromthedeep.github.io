@@ -3,6 +3,16 @@ var homeButton;
 var projectButton;
 var projectMenu;
 
+var menu = { };
+
+function open(button) {
+	button.element.innerHTML = button.button + button.menu;
+}
+
+function close(button) {
+	button.element.innerHTML = button.button;
+}
+
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
@@ -14,18 +24,24 @@ funk.listen(window,'load',function() {
 		
 		buttons = { home: homeButton, project: projectButton };
 		
+		menu = {
+			project: { element: projectButton, button: '<a class="nav-text" href="/misc/projects">Projects</a>', menu: projectMenu }
+		}
+		
 		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
 			projectMenu = response.text;
 			
 			projectButton.listen('mouseenter',function() {
-				console.log('mouse enter');
-				//projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>' + projectMenu;
+				open(menu.project);
 			});
 			
 			projectButton.listen('mouseleave',function() {
-				console.log('mouse leave');
-				//projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>';
+				close(menu.project);
 			});
+		});
+		
+		funk.retrieveId('nav-wrapper').listen('mouseleave',function() {
+			close(menu.project);
 		});
 		
 		if(pageType) {
