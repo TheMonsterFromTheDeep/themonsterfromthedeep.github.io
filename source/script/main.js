@@ -36,10 +36,10 @@ funk.listen(window,'load',function() {
 		if(mfd.pageType) {
 			switch(mfd.pageType) {
 				case 'home':
-					funk.setAttribute(homeButton,'class','nav-select');
+					funk.setAttribute(mfd.nav.buttons.home,'class','nav-select');
 					break;
 				case 'project':
-					funk.setAttribute(projectButton,'class','nav-select');
+					funk.setAttribute(mfd.nav.buttons.projects,'class','nav-select');
 					break;
 			}
 		}
