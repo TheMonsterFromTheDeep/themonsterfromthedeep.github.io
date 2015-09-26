@@ -1,0 +1,29 @@
+body {
+	margin: none;
+	padding: none;
+	font-family: sans-serif;
+}
+
+#nav-wrapper {
+	background-color: #298532;
+}
+
+#nav {
+	width: 60%;
+	height: 45px;
+	margin: 0px auto;
+	padding: 3px;
+	font-size: 30px;
+}
+
+.nav-button {
+	background-color: #298532;
+}
+
+.nav-button:hover {
+	background-color: #14741d;
+}
+
+#page-wrapper {
+	background-color: #14741d;
+}
