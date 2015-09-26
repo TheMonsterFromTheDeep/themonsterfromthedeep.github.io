@@ -18,11 +18,13 @@ funk.listen(window,'load',function() {
 			projectMenu = response.text;
 			
 			projectButton.listen('mouseenter',function() {
-				projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>' + projectMenu;
+				console.log('mouse enter');
+				//projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>' + projectMenu;
 			});
 			
 			projectButton.listen('mouseleave',function() {
-				projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>';
+				console.log('mouse leave');
+				//projectButton.innerHTML = '<a class="nav-text" href="/misc/projects">Projects</a>';
 			});
 		});
 		
