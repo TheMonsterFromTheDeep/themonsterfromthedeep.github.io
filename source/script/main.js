@@ -1,6 +1,4 @@
-var begin = function() { }
-
-alert('retrieving document...');
+var begin = function() { };
 
 window.onload = function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
