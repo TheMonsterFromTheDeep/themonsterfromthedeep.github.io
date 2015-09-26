@@ -1,52 +1,39 @@
-var buttons = { };
-var homeButton;
-var projectButton;
-var projectMenu;
-
-var menu = { };
-
-function open(button) {
-	button.element.innerHTML = button.button + button.menu;
+var mfd = { 
+	nav: { 
+		buttons: { }, 
+		menus: { } 
+		open: function(menu) {
+			funk.setAttribute(menu,'style','display:block;');
+		}
+		close: function(menu) {
+			funk.setAttribute(menu,'style','display:none;');
+		}
+	}
 }
 
-function close(button) {
-	button.element.innerHTML = button.button;
-}
+if(pageType) { mfd.pageType = pageType; }
+else { mfd.pageType = ''; }
 
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
 		
 		buttonList = funk.retrieveClass('nav-button');
-		homeButton = buttonList[0];
-		projectButton = buttonList[1];
-		projectMenu = '';
+		mfd.nav.buttons.home = buttonList[0];
+		mfd.nav.buttons.projects = buttonList[1];
 		
-		buttons = { home: homeButton, project: projectButton };
+		menuList = funk.retrieveClass('nav-menu');
+		mfd.nav.menu.projects = menuList[0];
 		
-		menu = {
-			project: { element: projectButton, button: '<a class="nav-text" href="/misc/projects">Projects</a>', menu: projectMenu }
-		}
+		mfd.nav.buttons.projects.listen('mouseenter',function() {
+			mfd.nav.open(mfd.nav.buttons.projects);
+		})
+		mfd.nav.buttons.projects.listen('mouseleave',function() {
+			mfd.nav.close(mfd.nav.buttons.projects);
+		})
 		
-		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
-			projectMenu = response.text;
-			menu.project.menu = projectMenu;
-			
-			projectButton.listen('mouseenter',function() {
-				open(menu.project);
-			});
-			
-			projectButton.listen('mouseleave',function() {
-				close(menu.project);
-			});
-		});
-		
-		funk.retrieveId('nav-wrapper').listen('mouseleave',function() {
-			close(menu.project);
-		});
-		
-		if(pageType) {
-			switch(pageType) {
+		if(mfd.pageType) {
+			switch(mfd.pageType) {
 				case 'home':
 					funk.setAttribute(homeButton,'class','nav-select');
 					break;
