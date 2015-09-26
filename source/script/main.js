@@ -1,4 +1,4 @@
-var begin = function() { }
+if(!begin) { var begin = function() { } }
 
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
