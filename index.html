@@ -7,7 +7,7 @@
 		<script type="text/javscript" src="/source/script/main.js"></script>
 		<script type="text/javascript">
 		window.onload = function() {
-			funk.ajax('GET','/navbar.html',null,function(response) {
+			funk.ajax('GET','/nav.html',null,function(response) {
 				document.getElementById('nav-wrapper').innerHTML = response.text;
 				document.getElementsByClassName('nav-button')[0].setAttribute('class','nav-select');
 			});		
