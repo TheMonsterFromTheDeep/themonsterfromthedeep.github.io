@@ -44,13 +44,16 @@ a {
 	display:inline-block;
 	height: 100%;
 	line-height: 48px;
-	padding: 0px 12px;
 	
 	vertical-align: top;
 }
 
 .nav-button:hover {
 	background-color: #08230c;
+}
+
+.nav-text {
+	padding: 0px 12px;
 }
 
 .nav-select {
