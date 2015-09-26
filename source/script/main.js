@@ -18,19 +18,20 @@ funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
 		
-		buttonList = funk.retrieveClass('nav-button');
+		var buttonList = funk.retrieveClass('nav-button');
 		mfd.nav.buttons.home = buttonList[0];
 		mfd.nav.buttons.projects = buttonList[1];
 		
-		menuList = funk.retrieveClass('nav-menu');
-		mfd.nav.menu.projects = menuList[0];
+		var menuList = funk.retrieveClass('nav-menu');
+		mfd.nav.menus.projects = menuList[0];
 		
 		mfd.nav.buttons.projects.listen('mouseenter',function() {
-			mfd.nav.open(mfd.nav.buttons.projects);
+			mfd.nav.open(mfd.nav.menus.projects);
 		})
 		mfd.nav.buttons.projects.listen('mouseleave',function() {
-			mfd.nav.close(mfd.nav.buttons.projects);
+			mfd.nav.close(mfd.nav.menus.projects);
 		})
+		mfd.nav.close(mfd.nav.menus.projects);
 		
 		if(mfd.pageType) {
 			switch(mfd.pageType) {
