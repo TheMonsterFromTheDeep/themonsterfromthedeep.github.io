@@ -6,16 +6,17 @@
 		<script type="text/javscript" src="/source/script/main.js"></script>
 		<script type="text/javascript">
 		window.onload = function() {
-			document.getElementsByClassName('nav-button')[0].setAttribute('class','nav-select');
+			funk.ajax('GET','/navbar.html',null,function(response) {
+				document.getElementById('nav-wrapper').innerHTML = response.text;
+				document.getElementsByClassName('nav-button')[0].setAttribute('class','nav-select');
+			});		
 		}
 		</script>
 		<title>Homepage | .MF.D</title>
 	</head>
 	<body>
 	<div id="page-wrapper">
-		<div id="nav-wrapper">
-			<img src="/source/image/icon.png" id="nav-icon" /><a class="nav-button">Home</a><a class="nav-button">Projects</a>
-		</div>
+		<div id="nav-wrapper"></div>
 		<div id="content-wrapper">
 		</div>
 	</div>
