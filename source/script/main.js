@@ -30,6 +30,7 @@ funk.listen(window,'load',function() {
 		
 		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
 			projectMenu = response.text;
+			menu.project.menu = projectMenu;
 			
 			projectButton.listen('mouseenter',function() {
 				open(menu.project);
