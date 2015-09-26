@@ -9,7 +9,7 @@ var mfd = {
 			funk.setAttribute(menu,'style','display:none;');
 		}
 	}
-}
+};
 
 if(pageType) { mfd.pageType = pageType; }
 else { mfd.pageType = ''; }
