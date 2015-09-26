@@ -8,8 +8,8 @@ funk.listen(window,'load',function() {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
 		
 		buttonList = funk.retrieveClass('nav-button');
-		homeButton = buttons[0];
-		projectButton = buttons[1];
+		homeButton = buttonList[0];
+		projectButton = buttonList[1];
 		projectMenu = '';
 		
 		buttons = { home: homeButton, project: projectButton };
