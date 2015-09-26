@@ -18,12 +18,12 @@ body {
 }
 
 #nav-wrapper {
-	position: fixed;
-	top: 0px;
+	background-color: #08530f;
+
 	width: 100%;
 	height: 48px;
-	font-size: 30px;
-	background-color: #08530f;
+
+	position: fixed;
 }
 
 a {
