@@ -16,12 +16,17 @@ body {
 
 #nav {
 	height: 48px;
-	padding: 0px 3px;
 	font-size: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
 }
 
 .nav-button {
 	background-color: #08530f;
+	padding: 0px 5px;
 }
 
 .nav-button:hover {
