@@ -26,6 +26,8 @@ body {
 	position: fixed;
 	
 	font-size: 24px;
+	
+	border-bottom: 1px solid #0c7916;
 }
 
 a {
@@ -59,6 +61,8 @@ a {
 	padding: 0px 12px;
 		
 	vertical-align: top;
+	
+	bordor-bottom: 1px solid #0e3614;
 }
 
 #content-wrapper {
