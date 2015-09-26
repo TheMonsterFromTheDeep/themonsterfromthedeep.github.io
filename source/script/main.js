@@ -1,10 +1,10 @@
 var mfd = { 
 	nav: { 
 		buttons: { }, 
-		menus: { } 
+		menus: { },
 		open: function(menu) {
 			funk.setAttribute(menu,'style','display:block;');
-		}
+		},
 		close: function(menu) {
 			funk.setAttribute(menu,'style','display:none;');
 		}
