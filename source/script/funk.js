@@ -2,18 +2,22 @@ var test;
 
 var funk = { };
 
-if(Element.setAttribute) {
-	funk.setAttribute = function(element,attribute,value) { element.setAttribute(attribute,value); }
-}
-else {
-	funk.setAttribute = function(element,attribute,value) { element[attribute] = value; }
+funk.setAttribute = function(element,attribute,value) {
+	if(element.setAttribute) {
+		element.setAttribute(attribute,value);
+	}
+	else {
+		element[attribute] = value; //TODO: Make polyfill using child nodes
+	}
 }
 
-if(Element.getAttribute) {
-	funk.getAttribute = function(element,attribute) { return element.getAttribute(attribute); }
-}
-else {
-	funk.getAttribute = function(element,attribute) { return element[attribute]; }
+funk.getAttribute = function(element,attribute) {
+	if(element.getAttribute) {
+		return element.getAttribute(attribute);
+	}
+	else {
+		return element[attribute]; //TODO: Make polyfill using child nodes
+	}
 }
 
 funk.retrieveEveryElementChild = function(element) {
