@@ -93,3 +93,8 @@ a {
 #content-wrapper {
 	margin-top: 48px;
 }
+
+#content {
+	margin-left: 48px;
+	width: 50%;
+}
