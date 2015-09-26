@@ -8,7 +8,7 @@ body {
 }
 
 #page-wrapper {
-	background-color: #0e3614;
+	background-color: #071609;
 	
 	position: absolute;
 	top: 0px;
@@ -97,4 +97,5 @@ a {
 #content {
 	margin-left: 48px;
 	width: 50%;
+	background-color: #0e3614;
 }
