@@ -11,5 +11,19 @@ funk.listen(window,'load',function() {
 					break;
 			}
 		}
+		
+		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
+			var projectButton = funk.retrieveClass('nav-button')[1];
+		
+			projectButton.listen('mouseenter',function() {
+				projectButton.innerHTML = "Project" + response.text;
+			});
+			
+			projectButton.listen('mouseexit',function() {
+				projectButton.innerHTML = "Project";
+			});
+		});
+		
+
 	});
 });

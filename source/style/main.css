@@ -65,6 +65,22 @@ a {
 	border-bottom: 1px solid #0e3614;
 }
 
+#nav-menu {
+	width: 100%; 
+	
+	padding: 0px 12px; 
+	margin: 0px;
+	
+	background-color: #08230c;
+	list-style-type: none;
+	
+	display: block;
+}
+
+.nav-menu-button {
+	font-size: 20px;
+}
+
 #content-wrapper {
 	margin-top: 48px;
 }
