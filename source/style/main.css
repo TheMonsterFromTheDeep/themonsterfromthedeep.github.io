@@ -46,6 +46,13 @@ a {
 	background-color: #071609;
 }
 
+.nav-select {
+	background-color: #071609;
+	padding: 0px 12px;
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+}
 
 #content-wrapper {
 	margin-top: 48px;
