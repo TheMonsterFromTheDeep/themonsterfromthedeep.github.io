@@ -1,10 +1,16 @@
+html { height: 100%; }
+
 body {
-	margin: none;
-	padding: none;
+	margin: 0px;
+	padding: 0px;
 	font-family: sans-serif;
+	height: 100%;
 }
 
 #nav-wrapper {
+	position: fixed;
+	top: 0px;
+	width: 100%;
 	background-color: #298532;
 }
 
@@ -12,7 +18,7 @@ body {
 	width: 60%;
 	height: 45px;
 	margin: 0px auto;
-	padding: 3px;
+	padding: 0px 3px;
 	font-size: 30px;
 }
 
@@ -26,4 +32,9 @@ body {
 
 #page-wrapper {
 	background-color: #14741d;
+	height: 100%;
+}
+
+#content-wrapper {
+	margin-top: 45px;
 }
