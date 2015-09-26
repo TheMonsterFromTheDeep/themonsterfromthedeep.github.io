@@ -11,30 +11,35 @@ body {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	background-color: #298532;
+	background-color: #06380b;
 }
 
 #nav {
 	width: 60%;
-	height: 45px;
+	height: 48px;
 	margin: 0px auto;
 	padding: 0px 3px;
 	font-size: 30px;
 }
 
+#icon {
+	width: 48px;
+	height: 48px;
+}
+
 .nav-button {
-	background-color: #298532;
+	background-color: #06380b;
 }
 
 .nav-button:hover {
-	background-color: #14741d;
+	background-color: #081709;
 }
 
 #page-wrapper {
-	background-color: #14741d;
+	background-color: #081709;
 	height: 100%;
 }
 
 #content-wrapper {
-	margin-top: 45px;
+	margin-top: 48px;
 }
