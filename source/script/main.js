@@ -1,11 +1,18 @@
+var buttons = { };
+var homeButton;
+var projectButton;
+var projectMenu;
+
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
 		
-		var buttons = funk.retrieveClass('nav-button');
-		var homeButton = buttons[0];
-		var projectButton = buttons[1];
-		var projectMenu = '';
+		buttonList = funk.retrieveClass('nav-button');
+		homeButton = buttons[0];
+		projectButton = buttons[1];
+		projectMenu = '';
+		
+		buttons = { home: homeButton, project: projectButton };
 		
 		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
 			projectMenu = response.text;
