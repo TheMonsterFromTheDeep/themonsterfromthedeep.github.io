@@ -54,6 +54,8 @@ a {
 
 .nav-text {
 	padding: 0px 12px;
+	height: 48px;
+	display: inline-block;
 }
 
 .nav-select {
@@ -79,6 +81,9 @@ a {
 
 .nav-menu-button {
 	font-size: 20px;
+	height: 48px;
+	width: 100%;
+	display: block;
 }
 
 #content-wrapper {
