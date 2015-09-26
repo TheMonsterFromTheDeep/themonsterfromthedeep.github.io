@@ -21,12 +21,9 @@ body {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	background-color: #08530f;
-}
-
-#nav {
 	height: 48px;
 	font-size: 30px;
+	background-color: #08530f;
 }
 
 a {
@@ -36,10 +33,10 @@ a {
 
 .nav-button {
 	background-color: #08530f;
-	padding: 0px 12px;
-	height: 48px;
+	display:inline-block;
+	height: 100%;
 	line-height: 48px;
-	display: inline-block;
+	padding: 0px 12px;
 }
 
 .nav-button:hover {
@@ -48,10 +45,10 @@ a {
 
 .nav-select {
 	background-color: #071609;
-	padding: 0px 12px;
-	height: 48px;
+	display:inline-block;
+	height: 100%;
 	line-height: 48px;
-	display: inline-block;
+	padding: 0px 12px;
 }
 
 #content-wrapper {
