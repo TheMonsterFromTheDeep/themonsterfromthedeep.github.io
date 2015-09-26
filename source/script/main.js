@@ -1,16 +1,6 @@
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
 		funk.retrieveId('nav-wrapper').innerHTML = response.text;
-		if(pageType) {
-			switch(pageType) {
-				case 'home':
-					funk.setAttribute(funk.retrieveClass('nav-button')[0],'class','nav-select');
-					break;
-				case 'project':
-					funk.setAttribute(funk.retrieveClass('nav-button')[1],'class','nav-select');
-					break;
-			}
-		}
 		
 		funk.ajax('GET','/source/page/nav/menu/project.html',null,function(response) {
 			var projectButton = funk.retrieveClass('nav-button')[1];
@@ -24,6 +14,15 @@ funk.listen(window,'load',function() {
 			});
 		});
 		
-
+		if(pageType) {
+			switch(pageType) {
+				case 'home':
+					funk.setAttribute(funk.retrieveClass('nav-button')[0],'class','nav-select');
+					break;
+				case 'project':
+					funk.setAttribute(funk.retrieveClass('nav-button')[1],'class','nav-select');
+					break;
+			}
+		}
 	});
 });
