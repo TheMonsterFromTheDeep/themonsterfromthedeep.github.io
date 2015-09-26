@@ -33,6 +33,10 @@ a {
 	color: #000;
 }
 
+#nav-icon {
+	vertical-align:text-top;
+}
+
 .nav-button {
 	background-color: #08530f;
 	display:inline-block;
@@ -42,7 +46,7 @@ a {
 }
 
 .nav-button:hover {
-	background-color: #071609;
+	background-color: #08230c;
 }
 
 .nav-select {
