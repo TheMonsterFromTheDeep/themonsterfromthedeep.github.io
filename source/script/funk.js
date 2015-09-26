@@ -123,6 +123,14 @@ Element.prototype.listen = function(evt,handler) {
 	funk.listen(this,evt,handler);
 }
 
+funk.generate = function(html) {
+	//TODO: Make funk.generate() function
+}
+
+Element.prototype.generate = function(html) {
+	this.innerHTML += html;
+}
+
 funk.ajax = function(requestType,url,data,handler) {
 	var request;
 	if(window.XMLHttpRequest) {
