@@ -11,8 +11,7 @@ var mfd = {
 	}
 };
 
-if(pageType) { mfd.pageType = pageType; }
-else { mfd.pageType = ''; }
+mfd.pageType = pageType;
 
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
