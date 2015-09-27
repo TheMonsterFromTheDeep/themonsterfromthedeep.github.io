@@ -156,3 +156,8 @@ a {
 .extern-link:hover {
 	text-decoration: underline;
 }
+
+.extern-img {
+	vertical-align: middle;
+	margin: 0px 12px;
+}
