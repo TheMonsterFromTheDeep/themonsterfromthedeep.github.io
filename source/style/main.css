@@ -3,7 +3,7 @@ h1, p {
 	margin: 0px;
 }
 
-html { height: 100%; }
+html { height: 100%; } 
 
 body {
 	margin: 0px;
@@ -125,4 +125,13 @@ a {
 	background-color: #0e3614;
 	
 	padding: 12px;
+}
+
+.link {
+	color: #dca31c;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
 }
