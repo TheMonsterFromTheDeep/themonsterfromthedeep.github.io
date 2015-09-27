@@ -21,6 +21,7 @@ funk.listen(window,'load',function() {
 		var buttonList = funk.retrieveClass('nav-button');
 		mfd.nav.buttons.home = buttonList[0];
 		mfd.nav.buttons.projects = buttonList[1];
+		mfd.nav.buttons.fun = buttonList[2];
 		
 		var menuList = funk.retrieveClass('nav-menu');
 		mfd.nav.menus.projects = menuList[0];
@@ -41,6 +42,9 @@ funk.listen(window,'load',function() {
 				case 'project':
 					funk.setAttribute(mfd.nav.buttons.projects,'class','nav-select');
 					funk.setAttribute(mfd.nav.menus.projects,'class','nav-menu-select');
+					break;
+				case 'fun':
+					funk.setAttribute(mfd.nav.buttons.fun,'class','nav-select');
 					break;
 			}
 		}
