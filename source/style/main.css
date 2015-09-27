@@ -3,6 +3,10 @@ h1, h3, p {
 	margin: 0px;
 }
 
+.title {
+	margin: 10px 0px 5px 0px;
+}
+
 html { height: 100%; } 
 
 body {
@@ -58,7 +62,7 @@ a {
 }
 
 .nav-button:hover {
-	background-color: #08230c;
+	background-color: #0e3614;
 }
 
 .nav-text {
@@ -82,7 +86,15 @@ a {
 	padding: 0px 12px; 
 	margin: 0px;
 	
-	background-color: #08230c;
+	background-color: #0e3614;
+	list-style-type: none;
+}
+
+.nav-menu-select {
+	padding: 0px 12px; 
+	margin: 0px;
+	
+	background-color: #215a29;
 	list-style-type: none;
 }
 

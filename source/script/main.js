@@ -40,6 +40,7 @@ funk.listen(window,'load',function() {
 					break;
 				case 'project':
 					funk.setAttribute(mfd.nav.buttons.projects,'class','nav-select');
+					funk.setAttribute(mfd.nav.menus.projects,'class','nav-menu-select');
 					break;
 			}
 		}
