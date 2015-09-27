@@ -1,4 +1,4 @@
-h1, p {
+h1, h3, p {
 	padding: 0px;
 	margin: 0px;
 }
@@ -68,14 +68,14 @@ a {
 }
 
 .nav-select {
-	background-color: #0e3614;
+	background-color: #215a29;
 	display:inline-block;
 	height: 100%;
 	line-height: 48px;
 		
 	vertical-align: top;
 	
-	border-bottom: 1px solid #0e3614;
+	border-bottom: 1px solid #215a29;
 }
 
 .nav-menu {
@@ -117,12 +117,12 @@ a {
 	width: 70%;
 	height: 100%;
 	
-	background-color: #0e3614;
+	background-color: #215a29;
 }
 
 #content {
 	margin-top: 48px;
-	background-color: #0e3614;
+	background-color: #215a29;
 	
 	padding: 12px;
 }
