@@ -16,7 +16,7 @@ else { mfd.pageType = ''; }
 
 funk.listen(window,'load',function() {
 	funk.ajax('GET','/nav.html',null,function(response) {
-		funk.retrieveId('nav-wrapper').generate(response.text);
+		funk.retrieveId('nav-wrapper').innerHTML = response.text;
 		
 		var buttonList = funk.retrieveClass('nav-button');
 		mfd.nav.buttons.home = buttonList[0];
