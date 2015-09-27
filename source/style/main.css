@@ -88,6 +88,10 @@ a {
 	
 	background-color: #0e3614;
 	list-style-type: none;
+	
+	border-style: solid;
+	border-color: #0c7916;
+	border-width: 0px 1px 1px 1px;
 }
 
 .nav-menu-select {
