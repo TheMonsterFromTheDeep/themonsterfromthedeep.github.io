@@ -147,3 +147,12 @@ a {
 .link:hover {
 	text-decoration: underline;
 }
+
+.extern-link {
+	color: #dc441c;
+	text-decoration: none;
+}
+
+.extern-link:hover {
+	text-decoration: underline;
+}
