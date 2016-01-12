@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<style>
+body { margin: 0px; padding: 0px; background-color: #000000; font-family: sans-serif; }
+#jay { display: block; }
+#tweet { font-size: 80px; margin: 0px auto; text-align: center; }
+</style>
+<script type="text/javascript">
+var BASEVEL = 10;
+var MAXPOS = 1000;
+var MINPOS = 0;
+var TIMEOUT = 20; 
+var cooldown = 0;
+var pos = 0;
+var vel = BASEVEL;
+var update = function() {
+	pos += vel;
+	if(pos > MAXPOS) { vel = -1 * BASEVEL; pos = MAXPOS; cooldown = TIMEOUT; }
+	if(pos < MINPOS) { vel = BASEVEL; pos = MINPOS; cooldown = TIMEOUT; }
+	document.getElementById("jay").setAttribute("style","margin-left: " + pos + "px;");
+	
+	if(cooldown > 0) { document.getElementById("tweet").setAttribute("style","color: #c7c7c7;"); }
+	if(cooldown === 0) { document.getElementById("tweet").setAttribute("style","color: #000000;"); }
+	cooldown--;
+	requestAnimationFrame(update);
+}
+window.onload = function() {
+	MAXPOS = document.body.offsetWidth - document.getElementById("jay").offsetWidth;
+	requestAnimationFrame(update);
+	
+	document.body.onresize = function() {
+		MAXPOS = document.body.offsetWidth - document.getElementById("jay").offsetWidth;
+	}
+}
+</script>
+<title>TWEET</title>
+</head>
+<body>
+<img src="jay.jpg" style="margin-left: 600px;" id="jay">
+<div style="color: #000000;" id="tweet">TWEET</div>
+
+
+</body></html>
