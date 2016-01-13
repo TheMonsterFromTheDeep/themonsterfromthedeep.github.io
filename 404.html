@@ -1,29 +1,62 @@
----
+﻿---
 permalink: /404.html
 ---
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"></meta>
-		<link rel="stylesheet" type="text/css" href="/source/style/main.css" />
-		<script type="text/javascript" src="/source/script/funk.js"></script>
-		<script type="text/javascript">var pageType = '';</script>
-		<script type="text/javascript" src="/source/script/main.js"></script>
-		<title>404 - File Not Found | .MF.D</title>
-	</head>
-	<body>
-	<div id="page-wrapper">
-		<div id="nav-wrapper"></div>
-		<div id="content-wrapper">
-			<div id="content-pane">
-				<div id="content">
-					<h1>404</h1>
-					<p>The file you requested apparently doesn't exist. You can navigate using the navbar at the top (if you have JS enabled) or
-					   you can push the back button in your browser to go back.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>[404] File Not Found</title>
+        <style>
+        html { 
+            height: 100%;
+            color: black;
+        }
+
+        body {
+            margin: 0px;
+            height: 100%;
+            text-align: center;
+            font-family: sans-serif;
+            background-color: #efefef;
+        }
+
+        hr { width: 90%; }
+
+        h1 { 
+            font-size: 90px;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        p {
+            padding: 10px;
+            margin: 0px;
+        }
+
+        a, a:visited {
+            color: #5F84D9;
+            text-decoration: underline;
+        }
+
+        #center {
+            width: 50%;
+            height: 100%;
+            margin: 0px auto;
+            background-color: #e0e0e0;
+        }
+
+        #content {
+            padding-top: 10%;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="center">
+            <div id="content">
+            <hr />
+            <h1>404</h1>
+            <p>The file you requested does not exist. Would you like to return to the <a href="/">homepage</a>?</p>
+            <hr />
+        </div>
+    </body>
 </html>
