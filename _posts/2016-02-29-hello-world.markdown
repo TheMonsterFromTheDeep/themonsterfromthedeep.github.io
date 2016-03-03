@@ -3,6 +3,7 @@ layout: post
 title:  "Hello, World!"
 gist: "'Hello, World!' is basically the mandatory title for the first post of a tech-oriented blog. Some of my thoughts on blogging and web design."
 disqusid: 0
+permalink: /blog/hello-world/
 ---
 When learning a text-based programming language, the first thing that anybody does is make their computer say "Hello, world!" or "Hello, World!" or a variant thereof. Of course, anybody who has ever learned a text-based programming language already knows this. Hello world has become a tradition in the programming community.<br /><br />
 
