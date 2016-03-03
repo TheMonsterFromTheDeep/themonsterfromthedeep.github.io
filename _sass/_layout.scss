@@ -1,0 +1,100 @@
+$sidebar-size: 10%;
+$content-width: 60%;
+$content-margin: 10%;
+$nav-color: #edfff8;
+$page-color: #ffffff;
+$content-color: #fafafa;
+$footer-color: #eeeeee;
+$side-padding: 30px;
+$teal-border-color: #62dcaa;
+
+html, body { 
+	height: 100%;
+	background-color: $nav-color;
+	
+	font-family: "Arial", "Verdana", "Tahoma", sans-serif;
+	color: #000;
+}
+
+#page-wrapper {
+	height: 100%;
+	margin-left: $sidebar-size;
+
+	background-color: $page-color;
+	border-left: solid 3px $teal-border-color;
+
+	overflow-y: auto;
+}
+
+#sidebar {
+	float: left;
+	
+	width: $sidebar-size;
+}
+
+#sidebar-icon {
+	width: 80%;
+	
+	margin: 10%;
+	
+	border-radius: 10%;
+	-moz-border-radius: 10%;
+	-webkit-border-radius: 10%;
+}
+
+#site-nav {
+	border-bottom: solid 3px $teal-border-color;
+
+	font-family: "Segoe UI", "Tahoma", sans-serif;
+	font-size: 2.5em;
+
+	position: fixed;
+	right: 0px;
+	left: $sidebar-size;
+	
+	background-color: $nav-color;
+}
+
+#page-container {
+	background-color: $page-color;
+	
+}
+
+#content-wrapper {
+	width: $content-width;
+	height: 100%;
+	margin-left: $content-margin;
+	background-color: $footer-color;
+}
+
+#content {
+	padding: 5em $side-padding 3em $side-padding;
+	background-color: $content-color;
+	font-size: 18px;
+}
+
+.nav-button {
+	height: 100%;
+	display: inline-block;
+	padding: 0.2em 0.5em;
+	border-right: solid 1px $teal-border-color;
+	
+	margin: 0px;
+	
+	text-decoration: none;
+	color: #000;
+}
+
+.nav-button:visited {
+	color: #000;
+}
+
+.nav-button:hover {
+	background-color: #d1ffec;
+}
+
+#site-footer {
+	padding: 2em $side-padding 2em $side-padding;
+	border-top: 2px solid #cdcdcd;
+	background-color: $footer-color;
+}

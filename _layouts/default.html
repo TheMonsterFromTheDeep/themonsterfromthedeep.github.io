@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+	<body>
+        <nav id="site-nav">
+			<a class="nav-button" href="{{ site.baseurl }}/">
+			Home</a><a class="nav-button" href="{{ site.baseurl }}/projects/">
+			Projects</a><a class="nav-button" href="{{ site.baseurl }}/blog/">
+			Blog</a>
+		</nav>
+		<a id="sidebar" href="{{ site.baseurl }}">
+			<img id="sidebar-icon" src="{{ site.baseurl }}/assets/logo.png" />
+		</a>
+		<div id="page-wrapper">
+			    <div id="content-wrapper">
+                    <div id="content">
+			            {{ content }}
+                    </div>
+                    {% include footer.html %}
+			    </div>
+            </div>
+	</body>
+</html>
