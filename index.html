@@ -1,0 +1,26 @@
+---
+layout: default
+title: MOD's Homepage
+---
+
+<h2>Welcome!</h2>
+Hello! By some bizarre circumstance you have arrived upon my personal Github Pages site.
+<br><br>
+<h2>Who am I?</h2>
+On the Internet, I go by "TheMonsterFromTheDeep" (or a slight variation thereof). I am
+a teenager whose hobbies include programming and animation. I have both a
+<a href=https://github.com/TheMonsterFromTheDeep>GitHub account</a>, where you can find
+all of my code, and a <a href=https://www.youtube.com/channel/UCG6vbJT8nUsmjrUUbNX3yBQ>
+YouTube account</a>, where you can find my animations.
+
+My most important projects are on the <a href="/projects/">Projects</a> page of this site.
+
+{% for post in site.posts %}
+  <article>
+	<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+	<h2>
+	  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+  </article>
+{% endfor %}

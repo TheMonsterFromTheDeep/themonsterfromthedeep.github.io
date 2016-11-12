@@ -1,0 +1,14 @@
+# Site settings
+title: MOD's GH Pages
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: ""
+url: "http://themonsterfromthedeep.github.io"
+# twitter_username: jekyllrb
+github_username:  TheMonsterFromTheDeep
+
+# Build settings
+markdown: kramdown
